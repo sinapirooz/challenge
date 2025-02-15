@@ -21,12 +21,13 @@ This app shows a list of the top three scoring football players in different lea
 
 You should refactor the project properly and fix possible bugs or memory leaks with these requirements:
 
-- You need to change the whole project to an extensible project. 
-- Choose an architecture you have experience with, such as MVP, MVVM, or MVI.
-- Use Hilt as dependency injection in the project.
-- Implement the desired logics in the radio buttons section.
-- UI performance in a large list must be acceptable.
-- Write couple of tests for the view's logic.
+- Refactor the entire project using Jetpack Compose.
+- Ensure the project is extensible.
+- Choose an architecture you have experience with, such as MVP or MVI.
+- Use Hilt for dependency injection.
+- Implement the required logic in the radio buttons section.
+- Write a couple of tests for the view's logic.
+- (Optional) You can apply Clean Architecture for better maintainability.
 
 
 #### What's the interview like?
