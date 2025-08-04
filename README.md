@@ -17,30 +17,53 @@ This app shows a list of the top three scoring football players in different lea
 - Make the project once (since we have some intermediate classes which need to be generated)
 - Chill :)
 
-#### Requirements
+#### 📝 Task Description
+In this task, you are expected to design and implement an Android application that displays football player data for all leagues and players provided.
 
-You should refactor the project properly and fix possible bugs or memory leaks with these requirements:
+Core Requirements:
+1. Display a list of players
+- Player data must be displayed using pagination.
+- Sorting should be applied across the entire dataset, not just the current page.
+- The method of implementing pagination and sorting — and how they interact — is completely up to you.
 
-- Refactor the entire project using Jetpack Compose.
-- Ensure the project is extensible.
-- Choose an architecture you have experience with, such as MVP or MVI.
-- Use Hilt for dependency injection.
-- Implement the required logic in the radio buttons section.
-- Write a couple of tests for the view's logic.
-- (Optional) You can apply Clean Architecture for better maintainability.
+2. Follow / Unfollow players
+- The user must be able to follow or unfollow any player.
+- Followed players should be persisted locally, so the follow status remains after closing and reopening the app.
+- How you model and store this state is entirely your decision.
+
+3. Followed players screen
+- The user must be able to view their followed players in a dedicated screen.
+- How this screen is accessed is also up to you (e.g. a button on the main screen, or a tab in bottom navigation).
 
 
-#### What's the interview like?
 
-We've tried to make the interview similar to our day-to-day work environment as much as it's
-possible. It means that:
+#### 🔧 Technical Requirements
+The following are mandatory and will be strictly evaluated:
 
-- You would have access to Internet, stackoverflow, official documentations, your other code
-  bases, ...
-- There's no penalty for searching the internet or copy pasting code from other sources. There's
-  only a penalty for not succeeding to solve the problem.
-- We have not memorized all of the Android's APIs, we do not value memorizing them, and we don't
-  expect you to have them memorized. We're developers too.
-- Since the interview might take two hours or three, please feel free to have a break during it and
-  pour yourself a cup of coffee, play a music in the background or anything else that you would
-  do during actual work days. It's just a normal coding session, not a big deal.
+Use Jetpack Compose for UI.
+
+Follow Clean Architecture principles with clear separation of layers (Presentation / Domain / Data).
+
+Implement Unit Tests for key components.
+
+Implement UI Tests for important user flows.
+
+Additional technical decisions — including state management, navigation, persistence, dependency injection, design system, etc. — are entirely up to you.
+
+Final UI/UX design is also open to your judgment and will be evaluated based on your analysis and decisions.
+
+
+
+#### 📌 Evaluation Criteria
+This task is not just about the final result — we're primarily evaluating your approach and thought process:
+
+- Accurate understanding and coverage of the requirements
+- Scalable and flexible architectural design
+- Clean and maintainable code structure
+- Proper state and data flow management
+- Code readability and modularity
+- Smooth, intuitive, and consistent user experience
+- Effective persistence and handling of follow state
+- Meaningful test coverage (both Unit and UI)
+- Quality of documentation and clarity of technical decisions
+
