@@ -1,5 +1,8 @@
 package ir.miare.androidcodechallenge.presentation
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
@@ -9,19 +12,34 @@ import ir.miare.androidcodechallenge.domain.model.Player
 import ir.miare.androidcodechallenge.domain.model.PlayerSortType
 import ir.miare.androidcodechallenge.domain.repository.PlayerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import ir.miare.androidcodechallenge.domain.base.DataResult
 import ir.miare.androidcodechallenge.domain.model.PlayerListItem
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class PlayerListViewModel @Inject constructor(private val playerRepository: PlayerRepository) :
-    BaseViewModel<PlayerListUiModel>(PlayerListUiModel()) {
+class PlayerListViewModel @Inject constructor(private val playerRepository: PlayerRepository) : BaseViewModel<PlayerListUiModel>(PlayerListUiModel()) {
 
+    var likedList by mutableStateOf<List<String>>(emptyList())
+        private set
+
+    init {
+        viewModelScope.launch {
+            playerRepository.getFollowedPlayers().collectLatest { result ->
+                if (result is DataResult.Success) {
+                    likedList = result.data.map { it.name }
+                }
+            }
+        }
+    }
     init {
         onSortTypeChanged(sortType = PlayerSortType.ALL)
     }
+
+
 
     fun onFollowAction(player: Player) {
         viewModelScope.launch {

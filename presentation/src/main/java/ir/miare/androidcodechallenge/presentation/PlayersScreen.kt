@@ -12,6 +12,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,10 +21,20 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
+import ir.miare.androidcodechallenge.domain.base.DataResult
+import ir.miare.androidcodechallenge.domain.model.Player
 import ir.miare.androidcodechallenge.domain.model.PlayerListItem
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 @Composable
 fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
+    val likedList = viewModel.likedList
+
+
     BasePage(content = { data ->
         val pagingItems = data.sortedList.collectAsLazyPagingItems()
 
@@ -68,7 +80,7 @@ fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
                                     player = item.player,
                                     onButtonClicked = { viewModel.onFollowAction(player = it) },
                                     modifier = Modifier.fillMaxWidth(),
-                                    buttonTitle = "Follow"
+                                    buttonTitle = if (likedList.contains(item.player.name)) "Followed" else "Follow",
                                 )
                                 if (item.shouldShowDivider) {
                                     Divider(

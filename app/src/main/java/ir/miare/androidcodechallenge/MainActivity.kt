@@ -11,6 +11,7 @@ import androidx.navigation.compose.*
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ir.miare.androidcodechallenge.presentation.PlayersScreen
+import ir.miare.androidcodechallenge.presentation.following.FollowingScreen
 import ir.miare.androidcodechallenge.theme.FootbalPlayerTheme
 
 
@@ -62,7 +63,7 @@ fun MainScreen() {
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(BottomNavItem.PlayerList.route) { PlayersScreen() }
-//            composable(BottomNavItem.FollowedPlayers.route) { FollowedPlayersScreen()}
+            composable(BottomNavItem.FollowedPlayers.route) { FollowingScreen()}
         }
     }
 }
