@@ -1,8 +1,9 @@
-package ir.miare.androidcodechallenge.presentation
+package ir.miare.androidcodechallenge.presentation.player
 
 import androidx.paging.PagingData
 import ir.miare.androidcodechallenge.domain.model.PlayerListItem
 import ir.miare.androidcodechallenge.domain.model.PlayerSortType
+import ir.miare.androidcodechallenge.presentation.UiModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 

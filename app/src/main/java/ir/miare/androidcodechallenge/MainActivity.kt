@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.*
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import ir.miare.androidcodechallenge.presentation.PlayersScreen
+import ir.miare.androidcodechallenge.presentation.player.PlayersScreen
 import ir.miare.androidcodechallenge.presentation.following.FollowingScreen
 import ir.miare.androidcodechallenge.theme.FootbalPlayerTheme
 

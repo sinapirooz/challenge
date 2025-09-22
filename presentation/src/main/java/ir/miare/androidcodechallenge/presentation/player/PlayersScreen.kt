@@ -1,8 +1,10 @@
-package ir.miare.androidcodechallenge.presentation
+package ir.miare.androidcodechallenge.presentation.player
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -11,9 +13,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -21,14 +22,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
-import ir.miare.androidcodechallenge.domain.base.DataResult
-import ir.miare.androidcodechallenge.domain.model.Player
+import ir.miare.androidcodechallenge.domain.model.League
 import ir.miare.androidcodechallenge.domain.model.PlayerListItem
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
+import ir.miare.androidcodechallenge.presentation.BasePage
+import ir.miare.androidcodechallenge.presentation.PlayerItem
+import ir.miare.androidcodechallenge.presentation.PlayerPriorityChips
 
 @Composable
 fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
@@ -38,16 +36,13 @@ fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
     BasePage(content = { data ->
         val pagingItems = data.sortedList.collectAsLazyPagingItems()
 
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            PlayerPriorityChips(
-                selectedOption = data.currentSortType,
-                onOptionSelected = { viewModel.onSortTypeChanged(sortType = it) }
-            )
-
-            LazyColumn(modifier = Modifier.weight(1f)) {
+            LazyColumn(modifier = Modifier.fillMaxSize()) {
+                item {
+                    PlayerPriorityChips(
+                        selectedOption = data.currentSortType,
+                        onOptionSelected = { viewModel.onSortTypeChanged(sortType = it) }
+                    )
+                }
                 if (pagingItems.loadState.refresh == LoadState.Loading) {
                     item {
                         Box(
@@ -72,8 +67,13 @@ fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
                     when (val item = pagingItems[index]) {
                         is PlayerListItem.LeagueHeader -> {
 
+                            LeagueHeaderComponent(
+                                league = item.league,
+                                modifier = Modifier.fillMaxWidth()
+                            )
 
                         }
+
                         is PlayerListItem.PlayerItem -> {
                             Column {
                                 PlayerItem(
@@ -91,6 +91,7 @@ fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
                                 }
                             }
                         }
+
                         null -> {
                             Box(
                                 modifier = Modifier
@@ -117,6 +118,17 @@ fun PlayersScreen(viewModel: PlayerListViewModel = hiltViewModel()) {
                     }
                 }
             }
-        }
+
     }, uiModel = viewModel.uiStateFlow)
+}
+@Composable
+private fun LeagueHeaderComponent(modifier: Modifier = Modifier, league: League) {
+    Row(
+        modifier = modifier
+            .background(color = Color.LightGray)
+            .padding(horizontal = 8.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(text = "${league.name} - Rank(${league.rank})")
+    }
 }

@@ -2,6 +2,7 @@ package ir.miare.androidcodechallenge.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -21,8 +22,8 @@ fun PlayerPriorityChips(
     selectedOption: PlayerSortType,
     onOptionSelected: (PlayerSortType) -> Unit
 ) {
-    Column(modifier = modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        PlayerSortType.values().forEach { option ->
+    FlowRow(modifier = modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        PlayerSortType.entries.forEach { option ->
             FilterChip(
                 selected = option == selectedOption,
                 onClick = { onOptionSelected(option) },

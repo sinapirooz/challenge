@@ -1,0 +1,256 @@
+{
+  "results": [
+    {
+      "league": {
+        "name": "Primeira Liga",
+        "country": "Portugal",
+        "rank": 6,
+        "total_matches": 34
+      },
+      "players": [
+        {
+          "name": "Viktor Gyökeres",
+          "total_goal": 39,
+          "team": {
+            "name": "Sporting CP",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Clayton",
+          "total_goal": 14,
+          "team": {
+            "name": "Rio Ave",
+            "rank": 4
+          }
+        },
+        {
+          "name": "Samu Aghehowa",
+          "total_goal": 19,
+          "team": {
+            "name": "FC Porto",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Vangelis Pavlidis",
+          "total_goal": 19,
+          "team": {
+            "name": "Benfica",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Yanis Begraoui",
+          "total_goal": 11,
+          "team": {
+            "name": "Estoril Praia",
+            "rank": 5
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Eredivisie",
+        "country": "Netherlands",
+        "rank": 7,
+        "total_matches": 34
+      },
+      "players": [
+        {
+          "name": "Igor Paixão",
+          "total_goal": 16,
+          "team": {
+            "name": "Feyenoord",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Troy Parrott",
+          "total_goal": 14,
+          "team": {
+            "name": "AZ Alkmaar",
+            "rank": 4
+          }
+        },
+        {
+          "name": "Sem Steijn",
+          "total_goal": 24,
+          "team": {
+            "name": "FC Twente",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Luuk de Jong",
+          "total_goal": 14,
+          "team": {
+            "name": "PSV Eindhoven",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Dylan Vente",
+          "total_goal": 13,
+          "team": {
+            "name": "PEC Zwolle",
+            "rank": 5
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Süper Lig",
+        "country": "Turkey",
+        "rank": 8,
+        "total_matches": 38
+      },
+      "players": [
+        {
+          "name": "Krzysztof Piątek",
+          "total_goal": 21,
+          "team": {
+            "name": "İstanbul Başakşehir",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Ali Sowe",
+          "total_goal": 19,
+          "team": {
+            "name": "Çaykur Rizespor",
+            "rank": 4
+          }
+        },
+        {
+          "name": "Victor Osimhen",
+          "total_goal": 26,
+          "team": {
+            "name": "Galatasaray",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Youssef En-Nesyri",
+          "total_goal": 20,
+          "team": {
+            "name": "Fenerbahçe",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Simon Banza",
+          "total_goal": 19,
+          "team": {
+            "name": "Trabzonspor",
+            "rank": 5
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Russian Premier League",
+        "country": "Russia",
+        "rank": 9,
+        "total_matches": 30
+      },
+      "players": [
+        {
+          "name": "Aleksey Batrakov",
+          "total_goal": 3,
+          "team": {
+            "name": "Lokomotiv Moscow",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Chinonso Offor",
+          "total_goal": 2,
+          "team": {
+            "name": "FC Baltika Kaliningrad",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Andrei Mostovoy",
+          "total_goal": 2,
+          "team": {
+            "name": "Zenit St. Petersburg",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Vadim Rakov",
+          "total_goal": 4,
+          "team": {
+            "name": "Krylia Sovetov",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Artem Dzyuba",
+          "total_goal": 2,
+          "team": {
+            "name": "Akron Tolyatti",
+            "rank": 4
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Jupiler Pro League",
+        "country": "Belgium",
+        "rank": 10,
+        "total_matches": 34
+      },
+      "players": [
+        {
+          "name": "Christos Tzolis",
+          "total_goal": 12,
+          "team": {
+            "name": "Club Brugge",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Tolu Arokodare",
+          "total_goal": 17,
+          "team": {
+            "name": "KRC Genk",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Benito Raman",
+          "total_goal": 13,
+          "team": {
+            "name": "KV Mechelen",
+            "rank": 4
+          }
+        },
+        {
+          "name": "Kasper Dolberg",
+          "total_goal": 14,
+          "team": {
+            "name": "RSC Anderlecht",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Adriano Bertaccini",
+          "total_goal": 16,
+          "team": {
+            "name": "Sint-Truidense",
+            "rank": 2
+          }
+        }
+      ]
+    }
+  ],
+  "totalPage": 4,
+  "page": 2
+}

@@ -42,6 +42,34 @@ class NetworkModule {
                     includeQueries = arrayOf("page=0"),
                     excludeQueries = arrayOf()
                 ),
+                MockPathRule(
+                    method = "GET",
+                    route = "players",
+                    responseFile = "page1.json",
+                    includeQueries = arrayOf("page=1"),
+                    excludeQueries = arrayOf()
+                ),
+                MockPathRule(
+                    method = "GET",
+                    route = "players",
+                    responseFile = "page2.json",
+                    includeQueries = arrayOf("page=2"),
+                    excludeQueries = arrayOf()
+                ),
+                MockPathRule(
+                    method = "GET",
+                    route = "players",
+                    responseFile = "page3.json",
+                    includeQueries = arrayOf("page=3"),
+                    excludeQueries = arrayOf()
+                ),
+                MockPathRule(
+                    method = "GET",
+                    route = "players",
+                    responseFile = "page4.json",
+                    includeQueries = arrayOf("page=4"),
+                    excludeQueries = arrayOf()
+                )
             )
         )
     }

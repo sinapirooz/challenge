@@ -1,4 +1,4 @@
-package ir.miare.androidcodechallenge.presentation
+package ir.miare.androidcodechallenge.presentation.player
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -14,6 +14,7 @@ import ir.miare.androidcodechallenge.domain.repository.PlayerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ir.miare.androidcodechallenge.domain.base.DataResult
 import ir.miare.androidcodechallenge.domain.model.PlayerListItem
+import ir.miare.androidcodechallenge.presentation.BaseViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.map
@@ -21,7 +22,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class PlayerListViewModel @Inject constructor(private val playerRepository: PlayerRepository) : BaseViewModel<PlayerListUiModel>(PlayerListUiModel()) {
+class PlayerListViewModel @Inject constructor(private val playerRepository: PlayerRepository) : BaseViewModel<PlayerListUiModel>(
+    PlayerListUiModel()
+) {
 
     var likedList by mutableStateOf<List<String>>(emptyList())
         private set

@@ -1,0 +1,256 @@
+{
+  "results": [
+    {
+      "league": {
+        "name": "Scottish Premiership",
+        "country": "Scotland",
+        "rank": 11,
+        "total_matches": 38
+      },
+      "players": [
+        {
+          "name": "Daizen Maeda",
+          "total_goal": 16,
+          "team": {
+            "name": "Celtic",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Martin Boyle",
+          "total_goal": 15,
+          "team": {
+            "name": "Hibernian",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Simon Murray",
+          "total_goal": 16,
+          "team": {
+            "name": "Dundee",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Cyriel Dessers",
+          "total_goal": 18,
+          "team": {
+            "name": "Rangers",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Sam Dalby",
+          "total_goal": 15,
+          "team": {
+            "name": "Dundee United",
+            "rank": 4
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Swiss Super League",
+        "country": "Switzerland",
+        "rank": 12,
+        "total_matches": 38
+      },
+      "players": [
+        {
+          "name": "Dereck Kutesa",
+          "total_goal": 15,
+          "team": {
+            "name": "Servette",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Xherdan Shaqiri",
+          "total_goal": 18,
+          "team": {
+            "name": "FC Basel",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Miroslav Stevanović",
+          "total_goal": 14,
+          "team": {
+            "name": "Luzern",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Willem Geubbels",
+          "total_goal": 11,
+          "team": {
+            "name": "FC St. Gallen",
+            "rank": 4
+          }
+        },
+        {
+          "name": "Alvyn Sanches",
+          "total_goal": 12,
+          "team": {
+            "name": "Lausanne-Sport",
+            "rank": 3
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Austrian Bundesliga",
+        "country": "Austria",
+        "rank": 13,
+        "total_matches": 32
+      },
+      "players": [
+        {
+          "name": "Patrik Mijić",
+          "total_goal": 12,
+          "team": {
+            "name": "TSV Hartberg",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Maximilian Entrup",
+          "total_goal": 13,
+          "team": {
+            "name": "LASK Linz",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Otar Kiteishvili",
+          "total_goal": 12,
+          "team": {
+            "name": "SK Sturm Graz",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Dorgelès Nene",
+          "total_goal": 13,
+          "team": {
+            "name": "Red Bull Salzburg",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Dominik Fitz",
+          "total_goal": 12,
+          "team": {
+            "name": "Austria Wien",
+            "rank": 4
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Greek Super League",
+        "country": "Greece",
+        "rank": 14,
+        "total_matches": 30
+      },
+      "players": [
+        {
+          "name": "Ayoub El Kaabi",
+          "total_goal": 18,
+          "team": {
+            "name": "Olympiacos",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Mady Camara",
+          "total_goal": 9,
+          "team": {
+            "name": "PAOK",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Zini",
+          "total_goal": 14,
+          "team": {
+            "name": "Levadiakos",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Loren Morón",
+          "total_goal": 18,
+          "team": {
+            "name": "Aris Thessaloniki",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Jefté Betancor",
+          "total_goal": 19,
+          "team": {
+            "name": "Panserraikos",
+            "rank": 4
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "name": "Saudi Pro League",
+        "country": "Saudi Arabia",
+        "rank": 15,
+        "total_matches": 30
+      },
+      "players": [
+        {
+          "name": "Cristiano Ronaldo",
+          "total_goal": 25,
+          "team": {
+            "name": "Al Nassr",
+            "rank": 3
+          }
+        },
+        {
+          "name": "Karim Benzema",
+          "total_goal": 21,
+          "team": {
+            "name": "Al Ittihad",
+            "rank": 1
+          }
+        },
+        {
+          "name": "Ivan Toney",
+          "total_goal": 23,
+          "team": {
+            "name": "Al Ahli",
+            "rank": 2
+          }
+        },
+        {
+          "name": "Julián Quiñones",
+          "total_goal": 20,
+          "team": {
+            "name": "Al Qadsiah",
+            "rank": 5
+          }
+        },
+        {
+          "name": "Abderrazak Hamdallah",
+          "total_goal": 21,
+          "team": {
+            "name": "Al Shabab",
+            "rank": 4
+          }
+        }
+      ]
+    }
+  ],
+  "totalPage": 4,
+  "page": 3
+}

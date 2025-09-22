@@ -1,5 +1,6 @@
 package ir.miare.androidcodechallenge.data.remote.pageSource
 
+import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import ir.miare.androidcodechallenge.data.mapper.mapToDomain
@@ -16,7 +17,7 @@ class PlayerPagingSource(
             val response = api.fetchPlayers(page = page)
             if (response.isSuccessful) {
                 val body = response.body()
-                val totalPages = body?.totalPages ?: page
+                val totalPages = body?.totalPages ?: 4
                 LoadResult.Page(
                     data = body!!.result.map { it.mapToDomain() },
                     prevKey = null,
